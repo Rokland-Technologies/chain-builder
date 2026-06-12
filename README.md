@@ -15,12 +15,6 @@ hash so the chain can be copied between devices.
 why this build is here. Report anything off via the "Report a bug" link
 in the footer (or to dweldy@rokland.com directly).
 
-> **A custom domain at `tools.rokland.com` is planned but not yet live** —
-> waiting on access to whoever manages the rokland.com DNS records
-> (currently delegated to `searchingscout.com` nameservers, not a
-> self-serve provider). Once a CNAME record is in place, this site will
-> move; the github.io URL above will keep working via redirect.
-
 ## How this repo works
 
 This repo is a **publish target**, not the source of truth. The actual
@@ -35,18 +29,12 @@ To update the published page:
 2. Copy `Tidio/data/compat/chain-builder.html` to this repo's `index.html`
 3. Commit + push — GitHub Pages picks up the change within ~30 seconds
 
-A nightly sync workflow that does this automatically is on the followup
-list; for now the publish step is manual.
-
 ## Files
 
 | File | Purpose |
 |---|---|
 | `index.html` | The chain builder itself. Single-file standalone — no fetches, no external dependencies, no backend. Hot-links Shopify CDN images for product photos. |
 | `README.md` | This file. |
-
-(A `CNAME` file will be added back here once `tools.rokland.com` DNS is
-configured. Until then, the site serves directly at the `github.io` URL.)
 
 ## Architecture / privacy notes
 
